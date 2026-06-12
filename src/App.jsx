@@ -944,16 +944,3 @@ const Analytics = ({ data, formatRupiah, getDaysRemaining }) => {
   );
 };
 
-// Helper function yang belum didefinisikan
-const getDaysRemaining = (dateStr) => {
-  if (!dateStr) return 999;
-  const today = new Date();
-  today.setHours(0,0,0,0);
-  const deadline = new Date(dateStr);
-  deadline.setHours(0,0,0,0);
-  return Math.ceil((deadline - today) / (1000 * 60 * 60 * 24));
-};
-
-const formatRupiah = (num) => {
-  return 'Rp ' + (num || 0).toLocaleString('id-ID');
-};
